@@ -1,20 +1,30 @@
 {
    "name": "vue-tooltip",
    "version": "0.0.1",
-   "private": true,
    "description": "Tiny vue 3 tooltip directive",
-   "author": {
-      "name": "Ivan Che"
-   },
+   "author": "Ivan Che <ivan.chepurin@gmail.com>",
    "scripts": {
       "serve": "vue-cli-service serve dev/serve.js",
       "build:demo": "vue-cli-service build dev/serve.js --dest demo",
       "test": "echo \"Error: no test specified\" && exit 1",
       "publish:demo": "gh-pages -d demo",
-      "prepublish:demo": "npm run build:demo"
+      "prepublish:demo": "npm run build:demo",
+      "build": "rollup -c",
+      "prepublishOnly": "npm run build"
    },
-   "main": "index.js",
+   "main": "dist/vue-tooltip.ssr.js",
+   "browser": "dist/vue-tooltip.esm.js",
+   "module": "dist/vue-tooltip.esm.js",
+   "unpkg": "dist/vue-tooltip.min.js",
+   "files": [
+      "dist/*",
+      "src/*"
+   ],
    "devDependencies": {
+      "@babel/core": "^7.15.8",
+      "@babel/preset-env": "^7.15.8",
+      "@rollup/plugin-babel": "^5.3.0",
+      "@rollup/plugin-commonjs": "^21.0.0",
       "@vue/cli-plugin-babel": "~4.5.0",
       "@vue/cli-plugin-eslint": "~4.5.0",
       "@vue/cli-service": "~4.5.0",
@@ -25,6 +35,8 @@
       "eslint-config-prettier": "^6.15.0",
       "eslint-plugin-vue": "^7.0.0",
       "prettier": "^2.4.1",
+      "rollup": "^2.58.0",
+      "rollup-plugin-terser": "^7.0.2",
       "vue": "^3.0.0"
    },
    "eslintConfig": {
@@ -42,11 +54,6 @@
       },
       "rules": {}
    },
-   "browserslist": [
-      "> 1%",
-      "last 2 versions",
-      "not dead"
-   ],
    "_id": "vue-tooltip@0.0.1",
    "bugs": {
       "url": "https://github.com/gVguy/vue-tooltip/issues"
@@ -58,7 +65,6 @@
       "vue"
    ],
    "license": "ISC",
-   "readme": "ERROR: No README data found!",
    "repository": {
       "type": "git",
       "url": "git+https://github.com/gVguy/vue-tooltip.git"
