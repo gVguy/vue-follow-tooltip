@@ -13,7 +13,7 @@ function getTransitionDuration(computedStyle) {
 		.split(', ')
 		.findIndex(p => p == 'opacity')
 	if (i != -1)
-		return Number(
+		return parseFloat(
 			computedStyle.getPropertyValue('transition-duration').split('s, ')[i]
 		)
 	return 0

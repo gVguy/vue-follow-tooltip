@@ -54,6 +54,6 @@ body {
 	border-radius: 3px;
 	color: #fbfbfb;
 	font-family: 'Montserrat', sans-serif;
-	transition: opacity 0.3s;
+	transition: opacity 1s;
 }
 </style>
