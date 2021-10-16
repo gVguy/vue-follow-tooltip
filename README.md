@@ -5,7 +5,7 @@ Tiny tooltip directive for Vue 3
 Lets you create tooltips that follow cursor
 
 <p align="center">
-    🚀&nbsp;&nbsp;<b><a href="https://gvguy.github.io/vue-tooltip/">Live demo</a></b>&nbsp;&nbsp;🚀
+    🚀&nbsp;&nbsp;<b><a href="https://gvguy.github.io/vue-follow-tooltip/">Live demo</a></b>&nbsp;&nbsp;🚀
 </p>
 <p align="center">
     <a href="https://codepen.io/vanechka222/pen/mdMVLNR">Codepen</a>
