@@ -24,7 +24,7 @@ const buildFormats = []
 const esConfig = {
    input: 'src/tooltip.js',
    output: {
-      file: 'dist/vue-tooltip.esm.js',
+      file: 'dist/vue-follow-tooltip.esm.js',
       format: 'esm',
       exports: 'named'
    },
@@ -42,7 +42,7 @@ const umdConfig = {
    input: 'src/tooltip.js',
    output: {
       compact: true,
-      file: 'dist/vue-tooltip.ssr.js',
+      file: 'dist/vue-follow-tooltip.ssr.js',
       format: 'cjs',
       name: 'Tooltip',
       exports: 'auto'
@@ -55,7 +55,7 @@ const unpkgConfig = {
    input: 'src/tooltip.js',
    output: {
       compact: true,
-      file: 'dist/vue-tooltip.min.js',
+      file: 'dist/vue-follow-tooltip.min.js',
       format: 'iife',
       name: 'Tooltip',
       exports: 'auto'

@@ -7,4 +7,4 @@ const app = createApp(Demo)
 app.use(Tooltip)
 app.mount('#app')
 
-document.title = 'vue-tooltip'
+document.title = 'vue-follow-tooltip'

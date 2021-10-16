@@ -1,10 +1,10 @@
 <template>
 	<div id="app">
-		<h1>vue-tooltip</h1>
+		<h1>vue-follow-tooltip</h1>
 		<h3>
 			<a
 				class="docs-link"
-				href="https://github.com/gVguy/vue-tooltip"
+				href="https://github.com/gVguy/vue-follow-tooltip#vue-follow-tooltip"
 				v-tooltip="'View docs on github'"
 				>Docs</a
 			>

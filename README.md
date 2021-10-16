@@ -1,6 +1,8 @@
-# vue-tooltip
+# vue-follow-tooltip
 
 Tiny tooltip directive for Vue 3
+
+Lets you create tooltips that follow cursor
 
 <p align="center">
     🚀&nbsp;&nbsp;<b><a href="https://gvguy.github.io/vue-tooltip/">Live demo</a></b>&nbsp;&nbsp;🚀
@@ -17,13 +19,13 @@ Tiny tooltip directive for Vue 3
 
 ### Simple
 
-No dependencies. No under-the-hood libraries. Just a couple of Vanilla JS objects.
+No dependencies. No under-the-hood libraries. Just a couple of Vanilla JS objects
 
 ### Customizable
 
-There are a few things you can customize with options.
+There are a few things you can customize with options
 
-No need to override default styles, because there aren't any. Just add your CSS as usual.
+No need to override default styles, because there aren't any. Just add your CSS as usual
 
 > [More about styles](#styles) [More about options](#options)
 
@@ -32,13 +34,13 @@ No need to override default styles, because there aren't any. Just add your CSS 
 ### Install
 
 ```
-npm i vue-tooltip
+npm i vue-follow-tooltip
 ```
 
 ### Import
 
 ```javascript
-import Tooltip from 'vue-tooltip'
+import Tooltip from 'vue-follow-tooltip'
 
 // install it with use()
 
@@ -52,7 +54,7 @@ app.directive('tooltip', Tooltip)
 ### Use
 
 ```xml
-<button v-tooltip="'Look! It's a button, push it!">DON'T PUSH</button>
+<button v-tooltip="'Look! It's a button, let's push it!">DON'T PUSH</button>
 ```
 
 ## Options
@@ -68,9 +70,9 @@ app.use(Tooltip, {
 })
 ```
 
-The values in the example are the default values.
+The values in the example are the default values
 
-Property names are pretty self-explanatory.
+Property names are pretty self-explanatory
 
 ## Styles
 
