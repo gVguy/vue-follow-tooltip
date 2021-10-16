@@ -54,7 +54,7 @@ app.directive('tooltip', Tooltip)
 ### Use
 
 ```xml
-<button v-tooltip="'Look! It's a button, let's push it!">DON'T PUSH</button>
+<button v-tooltip="'Look! It\'s a button, let\'s push it!">DON'T PUSH</button>
 ```
 
 ## Options

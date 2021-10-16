@@ -17,8 +17,8 @@
    "module": "dist/vue-follow-tooltip.esm.js",
    "unpkg": "dist/vue-follow-tooltip.min.js",
    "files": [
-      "dist/*",
-      "src/*"
+      "dist/*.js",
+      "src/*.js"
    ],
    "devDependencies": {
       "@babel/core": "^7.15.8",

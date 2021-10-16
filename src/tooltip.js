@@ -70,8 +70,14 @@ class Tooltip {
 			this.computedStyle = window.getComputedStyle(this.el)
 
 			// set width and height to prevent wrapping
-			this.el.style.width = this.computedStyle.getPropertyValue('width')
-			this.el.style.height = this.computedStyle.getPropertyValue('height')
+			this.el.style.width =
+				Math.ceil(
+					parseFloat(this.computedStyle.getPropertyValue('width'))
+				) + 'px'
+			this.el.style.height =
+				Math.ceil(
+					parseFloat(this.computedStyle.getPropertyValue('height'))
+				) + 'px'
 
 			this.transitionDuration = getTransitionDuration(this.computedStyle)
 
