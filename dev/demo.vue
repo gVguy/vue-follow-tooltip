@@ -43,7 +43,6 @@ body {
 	align-items: center;
 	text-align: center;
 	width: 100%;
-	height: 200vh;
 }
 .text {
 	text-decoration: underline dotted;
@@ -55,6 +54,6 @@ body {
 	border-radius: 3px;
 	color: #fbfbfb;
 	font-family: 'Montserrat', sans-serif;
-	transition: opacity 0.3s;
+	transition: opacity 0.3s, height 10s;
 }
 </style>

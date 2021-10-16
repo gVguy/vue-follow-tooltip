@@ -7,6 +7,18 @@ const opts = {
 
 const tooltips = []
 
+function getTransitionDuration(computedStyle) {
+	const i = computedStyle
+		.getPropertyValue('transition-property')
+		.split(', ')
+		.findIndex(p => p == 'opacity')
+	if (i != -1)
+		return Number(
+			computedStyle.getPropertyValue('transition-duration').split('s, ')[i]
+		)
+	return 0
+}
+
 class Tooltip {
 	constructor(text) {
 		Object.assign(this, opts)
@@ -55,14 +67,18 @@ class Tooltip {
 		if (this.state == 'hidden') {
 			document.documentElement.append(this.el)
 
-			this.hasTransition = /(opacity|all)\s(0(?=\.)|[1-9]\d*)(\.\d+)?s/.test(
-				window.getComputedStyle(this.el).getPropertyValue('transition')
-			)
+			this.computedStyle = window.getComputedStyle(this.el)
+
+			// set width and height to prevent wrapping
+			this.el.style.width = this.computedStyle.getPropertyValue('width')
+			this.el.style.height = this.computedStyle.getPropertyValue('height')
+
+			this.transitionDuration = getTransitionDuration(this.computedStyle)
 
 			this.timeout = setTimeout(
 				() => {
 					this.el.style.opacity = 1
-					if (this.hasTransition) this.state = 'showing'
+					if (this.transitionDuration) this.state = 'showing'
 					else this.state = 'visible'
 				},
 				skipDelay ? 0 : this.delay
@@ -85,7 +101,7 @@ class Tooltip {
 			this.timeout = setTimeout(
 				() => {
 					this.el.style.opacity = 0
-					if (this.hasTransition) this.state = 'hiding'
+					if (this.transitionDuration) this.state = 'hiding'
 					else this.unmount()
 				},
 				skipDelay ? 0 : this.delay
