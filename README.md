@@ -11,9 +11,9 @@ Lets you create tooltips that follow cursor
     <a href="https://codepen.io/vanechka222/pen/mdMVLNR">Codepen</a>
 </p>
 
-<!-- <p align="center">
-    <img src="">
-</p> -->
+<p align="center">
+    <img src="https://media.giphy.com/media/BNS0LgRIyHnN4xARHw/source.gif">
+</p>
 
 ## Why
 
