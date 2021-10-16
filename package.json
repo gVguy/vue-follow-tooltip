@@ -1,6 +1,6 @@
 {
    "name": "vue-tooltip",
-   "version": "0.0.1",
+   "version": "1.0.0-beta.0",
    "description": "Tiny vue 3 tooltip directive",
    "author": "Ivan Che <ivan.chepurin@gmail.com>",
    "scripts": {
@@ -54,7 +54,6 @@
       },
       "rules": {}
    },
-   "_id": "vue-tooltip@0.0.1",
    "bugs": {
       "url": "https://github.com/gVguy/vue-tooltip/issues"
    },
