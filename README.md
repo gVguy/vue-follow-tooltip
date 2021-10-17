@@ -27,21 +27,30 @@ There are a few things you can customize with options
 
 No need to override default styles, because there aren't any. Just add your CSS as usual
 
-> [More about styles](#styles) [More about options](#options)
+> More about [styles](#styles)
+> More about [options](#options)
 
-## Usage
+## Installation
 
-### Install
+### NPM
 
 ```
 npm i vue-follow-tooltip
 ```
 
-### Import
-
 ```javascript
 import Tooltip from 'vue-follow-tooltip'
+```
 
+### CDN
+
+```xml
+<script src="https://unpkg.com/vue-follow-tooltip@latest"></script>
+```
+
+## Usage
+
+```javascript
 // install it with use()
 
 app.use(Tooltip)
@@ -50,8 +59,6 @@ app.use(Tooltip)
 
 app.directive('tooltip', Tooltip)
 ```
-
-### Use
 
 ```xml
 <button v-tooltip="'Look! It\'s a button, let\'s push it!">DON'T PUSH</button>
