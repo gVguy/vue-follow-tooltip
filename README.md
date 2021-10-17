@@ -28,6 +28,7 @@ There are a few things you can customize with options
 No need to override default styles, because there aren't any. Just add your CSS as usual
 
 > More about [styles](#styles)
+
 > More about [options](#options)
 
 ## Installation
