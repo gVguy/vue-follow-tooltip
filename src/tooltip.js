@@ -144,8 +144,10 @@ export default {
 		el.addEventListener('pointerout', el.tooltip)
 	},
 	beforeUnmount(el) {
+		el.tooltip.hide()
 		el.removeEventListener('pointerover', el.tooltip)
 		el.removeEventListener('pointerout', el.tooltip)
+		tooltips.splice(tooltips.indexOf(el.tooltip), 1)
 	},
 	install(app, options = {}) {
 		Object.assign(opts, options)
