@@ -62,7 +62,7 @@ app.directive('tooltip', Tooltip)
 ```
 
 ```xml
-<button v-tooltip="'Look! It\'s a button, let\'s push it!">DON'T PUSH</button>
+<button v-tooltip="`Look! It's a button, let's push it!`">DON'T PUSH</button>
 ```
 
 ## Options
@@ -102,7 +102,7 @@ Use it to apply styles to it like this:
 ### Styling guidelines
 
 -  There are no default styles, however, if you specify `top`, `left`, `opacity` & `position` they will have no effect
--  Dont use `transition: all ..`, it will mess with how the tooltip follows the cursor
+-  Don't use `transition: all ..`, it will mess with how the tooltip follows the cursor
 
 ## License
 
