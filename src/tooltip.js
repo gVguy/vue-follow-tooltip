@@ -103,7 +103,10 @@ class Tooltip {
 	}
 
 	hide(skipDelay) {
-		if (this.state == 'visible' || skipDelay) {
+		if (this.state == 'will-show') {
+			clearTimeout(this.timeout)
+			this.unmount()
+		} else if (this.state == 'visible' || skipDelay) {
 			this.timeout = setTimeout(
 				() => {
 					this.el.style.opacity = 0
@@ -116,9 +119,6 @@ class Tooltip {
 		} else if (this.state == 'showing') {
 			this.el.style.opacity = 0
 			this.state = 'hiding'
-		} else if (this.state == 'will-show') {
-			clearTimeout(this.timeout)
-			this.unmount()
 		}
 	}
 
@@ -127,6 +127,11 @@ class Tooltip {
 		this.el.removeEventListener('transitionend', this)
 		document.removeEventListener('pointermove', this)
 		this.state = 'hidden'
+	}
+
+	destroy() {
+		this.hide(true)
+		tooltips.splice(tooltips.indexOf(this), 1)
 	}
 
 	position(x, y) {
@@ -144,6 +149,8 @@ export default {
 		el.addEventListener('pointerout', el.tooltip)
 	},
 	beforeUnmount(el) {
+		el.tooltip.destroy()
+
 		el.removeEventListener('pointerover', el.tooltip)
 		el.removeEventListener('pointerout', el.tooltip)
 	},
