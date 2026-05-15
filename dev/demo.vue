@@ -8,7 +8,7 @@
 			>Docs</a
 		>
 	</h3>
-	<div v-tooltip="'This explains everything'" class="text" v-if="mounted">
+	<div v-tooltip="'This explains everything'" class="text">
 		This is some text that is hard to understand without some clarification
 	</div>
 </template>
@@ -18,18 +18,12 @@ export default {
 	name: 'Demo',
 	components: {},
 	data() {
-		return {
-			mounted: true
-		}
+		return {}
 	},
 	computed: {},
 	methods: {},
 	created() {},
-	mounted() {
-		setTimeout(() => {
-			this.mounted = false;
-		}, 2000);
-	}
+	mounted() {}
 }
 </script>
 
