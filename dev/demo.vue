@@ -1,17 +1,15 @@
 <template>
-	<div id="app">
-		<h1>vue-follow-tooltip</h1>
-		<h3>
-			<a
-				class="docs-link"
-				href="https://github.com/gVguy/vue-follow-tooltip#vue-follow-tooltip"
-				v-tooltip="'View docs on github'"
-				>Docs</a
-			>
-		</h3>
-		<div v-tooltip="'This explains everyting'" class="text">
-			This is some text that is hard to understand without some clarification
-		</div>
+	<h1>vue-follow-tooltip</h1>
+	<h3>
+		<a
+			class="docs-link"
+			href="https://github.com/gVguy/vue-follow-tooltip#vue-follow-tooltip"
+			v-tooltip="'View docs on github'"
+			>Docs</a
+		>
+	</h3>
+	<div v-tooltip="'This explains everything'" class="text" v-if="mounted">
+		This is some text that is hard to understand without some clarification
 	</div>
 </template>
 
@@ -20,12 +18,18 @@ export default {
 	name: 'Demo',
 	components: {},
 	data() {
-		return {}
+		return {
+			mounted: true
+		}
 	},
 	computed: {},
 	methods: {},
 	created() {},
-	mounted() {}
+	mounted() {
+		setTimeout(() => {
+			this.mounted = false;
+		}, 2000);
+	}
 }
 </script>
 
